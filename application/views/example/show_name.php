@@ -19,3 +19,10 @@ echo 'The name from the model is '.$aname;
     ?>
   </tbody>
 </table>
+<h2>About the urls</h2>
+<p>
+  The base url is <?php echo base_url(); ?>
+</p>
+<p>
+  The site url is <?php echo site_url(); ?>
+</p>
