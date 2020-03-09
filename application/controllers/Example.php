@@ -28,6 +28,7 @@ class Example extends CI_Controller{
   public function show_name(){
     $this->load->model('Example_model');
     $data['aname']=$this->Example_model->getName();
+    $data['students']=$this->Example_model->getStudents();
     //print_r($data);
     $this->load->view('example/show_name',$data);
 
