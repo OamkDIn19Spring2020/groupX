@@ -20,15 +20,15 @@ class Book_model extends CI_Model{
   }
 
   public function updateBook($id_book, $update_data){
-    if($id_book==1){
-      return false;
-    }
-    else{
       $this->db->where('id_book',$id_book);
       $this->db->update('book',$update_data);
-      return true;
-    }
-
+      return $this->db->affected_rows();
+  }
+  
+  public function deleteBook($id_book){
+    $this->db->where('id_book',$id_book);
+    $this->db->delete('book');
+    return $this->db->affected_rows();
   }
 
 }

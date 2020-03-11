@@ -35,7 +35,7 @@ class Book extends CI_Controller{
       'author'=>$this->input->post('author')
     );
     $test=$this->Book_model->updateBook($id_book, $update_data);
-    if(!$test){
+    if($test==0){
       $data['message']='You can not update this book';
       $data['return_url']='show_books';
       $data['page']='feedback/message_box';
@@ -47,6 +47,22 @@ class Book extends CI_Controller{
       $data['page']='feedback/message_box';
       $this->load->view('menu/content',$data);
     }
+  }
+    public function delete_book(){
+      $id_book=$this->input->post('id_book');
+      $test=$this->Book_model->deleteBook($id_book);
+      if($test==0){
+        $data['message']='You can not delete this book';
+        $data['return_url']='show_books';
+        $data['page']='feedback/message_box';
+        $this->load->view('menu/content',$data);
+      }
+      else{
+        $data['message']='Book deleted succesfully';
+        $data['return_url']='show_books';
+        $data['page']='feedback/message_box';
+        $this->load->view('menu/content',$data);
+      }
 
   }
 
