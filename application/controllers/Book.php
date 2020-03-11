@@ -34,8 +34,20 @@ class Book extends CI_Controller{
       'name'=>$this->input->post('name'),
       'author'=>$this->input->post('author')
     );
-    $this->Book_model->updateBook($id_book, $update_data);
-    redirect('book/show_books');
+    $test=$this->Book_model->updateBook($id_book, $update_data);
+    if(!$test){
+      $data['message']='You can not update this book';
+      $data['return_url']='show_books';
+      $data['page']='feedback/message_box';
+      $this->load->view('menu/content',$data);
+    }
+    else{
+      $data['message']='Book updated succesfully';
+      $data['return_url']='show_books';
+      $data['page']='feedback/message_box';
+      $this->load->view('menu/content',$data);
+    }
+
   }
 
 }
