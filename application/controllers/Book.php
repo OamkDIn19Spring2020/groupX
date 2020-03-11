@@ -12,7 +12,8 @@ class Book extends CI_Controller{
   public function show_books(){
     $data['books']=$this->Book_model->getBooks();
     //print_r($data);
-    $this->load->view('book/show_books',$data);
+    $data['page']='book/show_books';
+    $this->load->view('menu/content',$data);
   }
   public function add_book(){
     $this->load->view('book/add_book');

@@ -1,6 +1,6 @@
 <h2>Books</h2>
 <a href="<?php echo site_url('book/add_book'); ?>">Add a new Book</a>
-<table border="1">
+<table class="table">
   <thead>
     <tr>
       <th>id</th> <th>Book name</th> <th>Author</th>
