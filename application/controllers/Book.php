@@ -28,5 +28,14 @@ class Book extends CI_Controller{
     //echo 'inserted '.$test. 'books';
     redirect('book/show_books');
   }
+  public function edit_book(){
+    $id_book=$this->input->post('id_book');
+    $update_data=array(
+      'name'=>$this->input->post('name'),
+      'author'=>$this->input->post('author')
+    );
+    $this->Book_model->updateBook($id_book, $update_data);
+    redirect('book/show_books');
+  }
 
 }

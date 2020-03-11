@@ -19,4 +19,9 @@ class Book_model extends CI_Model{
     return $this->db->affected_rows();
   }
 
+  public function updateBook($id_book, $update_data){
+    $this->db->where('id_book',$id_book);
+    $this->db->update('book',$update_data);
+  }
+
 }
