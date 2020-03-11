@@ -103,7 +103,7 @@
                                 <label for="delete_author">Author</label> <br>
                                 <input type="text" id="delete_author" name="author" value="" disabled> <br>
                               </div>
-                              <input type="submit" class="btn btn-danger" name="" value="Delete">
+                              <input type="submit" class="btn btn-danger " name="" value="Delete">
                             </form>
                         </div>
                         <div class="modal-footer">

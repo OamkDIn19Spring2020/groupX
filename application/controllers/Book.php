@@ -63,7 +63,6 @@ class Book extends CI_Controller{
         $data['page']='feedback/message_box';
         $this->load->view('menu/content',$data);
       }
-
   }
 
 }

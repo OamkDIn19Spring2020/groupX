@@ -1,3 +1,4 @@
+<div class="modal fade" id="feedbackModal" role="dialog">
   <div class="modal-dialog" >
     <div class="modal-content">
       <div class="modal-header">
@@ -16,3 +17,8 @@
       </div>
     </div>
   </div>
+</div>
+
+<script>
+$('#feedbackModal').modal('toggle');
+</script>
