@@ -11,3 +11,9 @@ INSERT INTO book(name,author) VALUES('PHP Basic','Bob Jones');
 INSERT INTO book(name,author) VALUES('Statistics','Lisa Smith');
 
 GRANT ALL on ci_example.* to 'ci_user'@'localhost' IDENTIFIED BY 'ci_pass';
+
+
+CREATE TABLE user(
+username VARCHAR(20) primary key,
+password VARCHAR(255)
+);
